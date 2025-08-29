@@ -1,0 +1,377 @@
+/* CSS Reset */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* */
+/* */
+/* Styles */
+/* */
+body {
+  /* min-height: 100vh; */
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 6fr 0.25fr;
+}
+
+/* */
+
+header {
+  max-height: 100%;
+
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  font-family: Lobster, sans-serif;
+  font-size: clamp(40px, 5vw, 66px);
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* */
+
+main {
+  height: 100vh;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  grid-template-columns: 0.25fr 3fr 0.25fr 1fr 2fr 1fr 0.25fr 1fr 0.25fr;
+  grid-template-rows: repeat(14, 1fr);
+
+  overflow: hidden;
+}
+
+#shop-section {
+  border: solid black 3px;
+  border-radius: 8px;
+
+  padding: 2%;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 14;
+
+  display: grid;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr;
+}
+
+#shop-title {
+  background-color: black;
+  color: white;
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(20px, 3vw, 30px);
+  border-radius: 8px;
+
+  text-align: center;
+
+  margin-bottom: 2%;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#barley-item {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#corn-item {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#sunflower-item {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.shop-item {
+  border: solid black 2px;
+  border-radius: 8px;
+
+  margin-bottom: 2%;
+
+  display: grid;
+  grid-template-columns: 2fr 0.25fr 3fr;
+}
+
+#barley-image,
+#corn-image,
+#sunflower-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  grid-column-start: 3;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+  justify-items: center;
+  align-items: center;
+}
+
+button {
+  width: 80%;
+  height: 80%;
+  background-color: maroon;
+  color: white;
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 2vw, 20px);
+  border: none;
+  border-radius: 8px;
+}
+
+.seed-statuses {
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#barley-sps-label,
+#corn-sps-label,
+#sunflower-sps-label {
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 1.5vw, 20px);
+  margin-bottom: 1%;
+
+  text-align: center;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#barley-sps-amount,
+#corn-sps-amount,
+#sunflower-sps-amount {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 1.5vw, 20px);
+  text-align: center;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#barley-clicks-label,
+#corn-clicks-label,
+#sunflower-clicks-label {
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 1.5vw, 20px);
+
+  margin-bottom: 1%;
+
+  text-align: center;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#barley-clicks-amount,
+#corn-clicks-amount,
+#sunflower-clicks-amount {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 1.5vw, 20px);
+  text-align: center;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.seed-image {
+  width: 70%;
+}
+
+#score-section {
+  border: solid black 3px;
+  border-radius: 8px;
+  padding: 2%;
+
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#seed-amount-label {
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(20px, 3vw, 30px);
+
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1%;
+
+  text-align: center;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#seed-amount {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: clamp(20px, 3vw, 30px);
+  text-align: left;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sps-label {
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 2vw, 25px);
+
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+
+  text-align: center;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sps-amount {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: clamp(15px, 2vw, 25px);
+  text-align: left;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pigeon-section {
+  grid-column-start: 4;
+  grid-column-end: 7;
+
+  grid-row-start: 4;
+  grid-row-end: 14;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pigeon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pigeon-image {
+  width: 70%;
+}
+
+#poop-bucket-section {
+  border: solid black 3px;
+  border-radius: 8px;
+
+  padding: 2%;
+
+  grid-column-start: 8;
+  grid-column-end: 9;
+
+  grid-row-start: 9;
+  grid-row-end: 14;
+
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 3fr;
+}
+
+#poop-label {
+  background-color: black;
+  color: white;
+  font-family: lobster, sans-serif, Arial, Helvetica;
+  font-size: clamp(20px, 3vw, 30px);
+  border-radius: 8px;
+
+  text-align: center;
+
+  margin-bottom: 2%;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#poop-amount {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: clamp(30px, 4vw, 40px);
+  text-align: center;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#poop-bucket-image {
+  width: 85%;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  transform: translateX(9%);
+}
+
+/* */
+
+footer {
+  max-height: 100%;
+
+  text-align: center;
+  font-family: sans-serif, Arial, Helvetica;
+  font-weight: 50;
+  font-size: clamp(15px, 1vw, 20px);
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
