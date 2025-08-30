@@ -76,6 +76,58 @@ document.getElementById("barley-button").addEventListener("click", function () {
   }
 });
 
+// Corn shop item button
+document.getElementById("corn-button").addEventListener("click", function () {
+  let cornCost = document.getElementById("corn-button-cost").textContent;
+  if (poopAmount >= cornCost) {
+    poopAmount -= cornCost;
+    document.getElementById("poop-amount").textContent = Math.floor(poopAmount);
+
+    cornCost = cornCost * 1.15;
+    document.getElementById("corn-button-cost").textContent =
+      Math.floor(cornCost);
+
+    cornSPS += 0.3;
+    document.getElementById("corn-sps-amount").textContent =
+      Math.round(cornSPS * 10) / 10;
+
+    cornIncreaseClicks += 0.35;
+    document.getElementById("corn-clicks-amount").textContent =
+      Math.round(cornIncreaseClicks * 10) / 10;
+  } else {
+    alert("You don't have enough poop!");
+  }
+});
+
+// Sunflower shop item button
+
+document
+  .getElementById("sunflower-button")
+  .addEventListener("click", function () {
+    let sunflowerCost = document.getElementById(
+      "sunflower-button-cost"
+    ).textContent;
+    if (poopAmount >= sunflowerCost) {
+      poopAmount -= sunflowerCost;
+      document.getElementById("poop-amount").textContent =
+        Math.floor(poopAmount);
+
+      sunflowerCost = sunflowerCost * 1.2;
+      document.getElementById("sunflower-button-cost").textContent =
+        Math.floor(sunflowerCost);
+
+      sunflowerSPS += 0.4;
+      document.getElementById("sunflower-sps-amount").textContent =
+        Math.round(sunflowerSPS * 10) / 10;
+
+      sunflowerIncreaseClicks += 0.45;
+      document.getElementById("sunflower-clicks-amount").textContent =
+        Math.round(sunflowerIncreaseClicks * 10) / 10;
+    } else {
+      alert("You don't have enough poop!");
+    }
+  });
+
 //=============================================================
 
 //Tip on local storage:
