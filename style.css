@@ -5,6 +5,7 @@
 /* */
 /* Styles */
 /* */
+
 body {
   /* min-height: 100vh; */
   max-height: 100vh;
@@ -273,7 +274,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-#sps-amount {
+#total-sps-amount {
   font-family: sans-serif, Arial, Helvetica;
   font-size: clamp(15px, 2vw, 25px);
   text-align: left;
@@ -308,7 +309,18 @@ button {
 }
 
 #pigeon-image {
-  width: 70%;
+  width: 65%;
+}
+
+#pigeon-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+#pigeon-image:active {
+  transform: scale(0.9);
+  transition: transform 0.1s;
 }
 
 #poop-bucket-section {
