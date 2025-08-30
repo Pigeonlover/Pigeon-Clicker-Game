@@ -329,6 +329,14 @@ button:active {
   transition: transform 0.1s;
 }
 
+#reset-button {
+  grid-column-start: 8;
+  grid-column-end: 10;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 #poop-bucket-section {
   border: solid black 3px;
   border-radius: 8px;
