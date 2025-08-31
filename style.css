@@ -337,6 +337,14 @@ button:active {
   grid-row-end: 3;
 }
 
+#api-test-section {
+  grid-column-start: 8;
+  grid-column-end: 10;
+
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
 #poop-bucket-section {
   border: solid black 3px;
   border-radius: 8px;

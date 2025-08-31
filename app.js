@@ -238,13 +238,53 @@ document
 
 //fetch the upgrades from the API: "https://cookie-upgrade-api.vercel.app/api/upgrades"
 
-//To create multiple DOM elements in a more convenient way, you can use a loop!
+async function getShopUpgrades() {
+  const response = await fetch(
+    "https://cookie-upgrade-api.vercel.app/api/upgrades"
+  );
+  const data = await response.json();
+  console.log(data);
 
-//TODO: create DOM elements to contain the upgrades in the shop
-// create an element
-// assign the value to its text content
-// append it to the DOM
+  return data;
+}
+getShopUpgrades();
 
-//after you complete this task, you should see the upgrades on your page
+//
+//
+//
+//
+//
+//
 
-//================================================================
+// Fetching and displaying data from the API
+
+// function createUpgradeElement(data) {
+//   const upgradeSection = document.getElementById("api-test-content");
+
+//   // I will use a forEach loop to get each upgrade from the data more efficiently
+//   data.forEach(function (upgrade) {
+//     const eachUpgradeDiv = document.createElement("div");
+//     upgradeSection.appendChild(eachUpgradeDiv);
+//     eachUpgradeDiv.classList.add("each-upgrade-div");
+
+//     const upgradeName = document.createElement("h4");
+//     upgradeName.textContent = upgrade.name;
+//     eachUpgradeDiv.appendChild(upgradeName);
+
+//     const upgradeCost = document.createElement("p");
+//     upgradeCost.textContent = "Cost: " + upgrade.cost;
+//     eachUpgradeDiv.appendChild(upgradeCost);
+
+//     const upgradeIncrease = document.createElement("p");
+//     upgradeIncrease.textContent = "Increase: " + upgrade.increase;
+//     eachUpgradeDiv.appendChild(upgradeIncrease);
+//   });
+// }
+
+// async function displayUpgrades() {
+//   const upgrades = await getShopUpgrades();
+//   createUpgradeElement(upgrades);
+// }
+
+// displayUpgrades();
+//
