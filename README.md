@@ -26,6 +26,7 @@
 
 1) I made quite a big mistake: I just skim-read the assignment brief before starting to code the game. When I was pretty much done with it, I went back to read the brief in more detail to make sure I had everything in. That's when I saw that fetching some data from the provided API and using it for at least one upgrade was one of the basic requirements. It's my fault as all that time whilst I was making the game I thought it was just optional, so I made my game with completely custom upgrades... Anyways, I put the API code at the end of my JS file (commented out so the 'core' of my game doesn't get messed up with it) so at least it shows I know how to fetch API data and display them on the DOM. I sadly didn't have much time left, so I couldn't actually re-do it.
 2) The game looks perfect on desktop... On mobile devices, not so much. I didn't have enough time for making different layouts, but in the future I want to make a ```@media query``` and re-organise the layout so it looks better on smaller screens. Also, one of my friends that play-tested the game said that on mobile, if you tap the pigeon too quickly, it will automatically zoom in and zoom out the screen - continuously. Which would be very annoying and break the rythm of the game. I need to find out if there's a way to disable that feature for a future update.
+3) My original idea was for everything to be visible on the screen (so no scrolling), but I didn't manage to achieve that. It was very frustrating because I tried many ways and combinations, and it still didn't work. Maybe it was from using marging and paddings, but I am not exactly sure 😆. I think next time I'll make sure to use ```grid``` for spacing, too (by using thin columns and rows between elements), so I won't need to mess around with paddings and margins.
 
 ---
 
@@ -38,3 +39,7 @@ I also have ideas myself for future updates, such as adding achievements, access
 ---
 
 ## References
+- For help with ```active``` : https://www.w3schools.com/cssref/sel_active.php
+- For ```scale``` : https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
+- For a refresher on ```fetch```, I re-checked Manny's class demo as well as: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+- As a refresher in ```localStorage```, this article was useful to me: https://javascript.info/localstorage 
